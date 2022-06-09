@@ -21,9 +21,10 @@ const HomeScreen = () => {
       {users.map((user) => (
         <div key={user.id}>
           <ol>
-            Name : {user.name}
-            UserName : {user.username}
-            Email : {user.email}
+            Name : {user.name} / UserName : {user.username}/ Email :{' '}
+            {user.email} / Street : {user.address.street} / Suite :{' '}
+            {user.address.suite} / City : {user.address.city} / ZipCode :{' '}
+            {user.address.zipcode}/ phone : {user.phone} /
           </ol>
         </div>
       ))}
