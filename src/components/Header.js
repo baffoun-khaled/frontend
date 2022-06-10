@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { Avatar } from 'antd'
+import '../App.css'
 import icon from '../image/juke.png'
 
 const Header = () => {
@@ -9,7 +10,7 @@ const Header = () => {
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <Navbar.Brand href='/'>
-            <Avatar src={icon} size='small' />
+            <Avatar src={icon} size='small' className='avatar' />
             Jukebox
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />

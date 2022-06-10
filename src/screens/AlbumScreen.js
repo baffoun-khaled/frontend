@@ -22,7 +22,6 @@ const AlbumScreen = () => {
   useEffect(async () => {
     await fetchPhoto()
     await fetchData()
-    
   }, [])
 
   return (
@@ -30,8 +29,16 @@ const AlbumScreen = () => {
       <h1>List of our Albums</h1>
       {albums.map((album) => (
         <div key={album.id}>
-          <img src={photos[album.id].thumbnailUrl}></img>
           <span>Title : {album.title}</span>
+          <div>
+            thambnails
+            <div className='thamb'>
+              {photos &&
+                photos
+                  .filter((el) => el.albumId === album.id)
+                  .map((el) => <img src={el.thumbnailUrl} />)}
+            </div>
+          </div>
         </div>
       ))}
     </>
