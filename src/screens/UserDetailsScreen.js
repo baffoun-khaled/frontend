@@ -36,7 +36,7 @@ const UserDetails = ({ match }) => {
   }
   return (
     <div>
-      <div className='baf tracking-in-expand-fwd'>{user.name}</div>
+      <div className='name Titles tracking-in-expand-fwd'>{user.name}</div>
       <div>{user.username}</div>
       <div>{user.email}</div>
       <div>{user?.address?.street}</div>
@@ -50,15 +50,16 @@ const UserDetails = ({ match }) => {
       <div>{user?.company?.name}</div>
       <div>{user?.company?.catchPhrase}</div>
       <div>{user?.company?.bs}</div>
-      <h2>User albumss</h2>
+      <h2 className='Lists Titles tracking-in-expand-fwd'>
+        User prefered albums :
+      </h2>
       <div>
         {userAlbums.map((album) => {
           return (
             <div className='album-card' key={album.id}>
-              <p>albums title: {album.title}</p>
+              <p className='Mini Titles'>*Album title: {album.title} *</p>
               <div>
-                thambnails
-                <div className='thamb'>
+                <div>
                   {photos &&
                     photos
                       .filter((el) => el.albumId === album.id)

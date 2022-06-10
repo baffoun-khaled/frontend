@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import '../App.css'
 
 const AlbumScreen = () => {
   const [albums, setAlbums] = useState([])
@@ -26,13 +27,12 @@ const AlbumScreen = () => {
 
   return (
     <>
-      <h1>List of our Albums</h1>
+      <h1 className='List Titles tracking-in-expand-fwd'>List of our Albums</h1>
       {albums.map((album) => (
         <div key={album.id}>
-          <span>Title : {album.title}</span>
+          <span className='Mini Titles'>*Title : {album.title}*</span>
           <div>
-            thambnails
-            <div className='thamb'>
+            <div>
               {photos &&
                 photos
                   .filter((el) => el.albumId === album.id)

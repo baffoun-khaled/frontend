@@ -20,7 +20,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      <h1 className='tracking-in-expand-fwd'>List of our users</h1>
+      <h1 className='Lists Titles tracking-in-expand-fwd'>List of our users</h1>
       <div className='app-container'>
         <table>
           <thead>

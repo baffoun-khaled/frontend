@@ -8,15 +8,19 @@
 
 table {
   border-collapse: collapse;
+
   width: 100%;
+  border: 1px solid;
 }
 
 th {
   border-bottom: 1px solid black;
+  border: 1px solid;
 }
 
 td {
   text-align: right;
+  border: 1px solid;
 }
 
 .user-info {
@@ -70,7 +74,24 @@ td {
     opacity: 1;
   }
 }
-.baf {
-  color: red;
-
+.name {
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.Titles {
+  font-style: italic;
+}
+.Lists {
+  color: mediumvioletred;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.List {
+  color: rebeccapurple;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.Mini {
+  font-size: large;
 }
