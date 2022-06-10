@@ -1,17 +1,25 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Avatar } from 'antd'
+import icon from '../image/juke.png'
 
 const Header = () => {
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <Navbar.Brand href='/'>Jukebox</Navbar.Brand>
+          <Navbar.Brand href='/'>
+            <Avatar src={icon} size='small' />
+            Jukebox
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link href='/login'>
-                <i className='fas fa-user'> </i> Sign in
+              <Nav.Link href='/albums'>
+                <i className='fas fa-music'> </i> Albums
+              </Nav.Link>
+              <Nav.Link href='/'>
+                <i className='fas fa-user'> </i> Users
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
