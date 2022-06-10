@@ -7,9 +7,8 @@
 }
 
 table {
-  border: 2px solid forestgreen;
-  width: 800px;
-  height: 200px;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 th {
@@ -18,4 +17,8 @@ th {
 
 td {
   text-align: right;
+}
+
+.user-info {
+  text-align: left !important;
 }

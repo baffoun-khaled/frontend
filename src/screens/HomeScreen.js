@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../App.css'
 
 const HomeScreen = () => {
@@ -16,6 +17,7 @@ const HomeScreen = () => {
 
     setUsers(data)
   }
+
   return (
     <>
       <h1>List of our users</h1>
@@ -39,11 +41,15 @@ const HomeScreen = () => {
           </thead>
           <tbody>
             {users.map((user) => (
-              <div key={user.id}>
-                <tr>
-                  <td>{user.name}</td>
-                </tr>
-              </div>
+              <tr key={user.id}>
+                <td className='user-info'>
+                  <Link to={`/user/${user.id}`}>{user.name}</Link>
+                </td>
+                <td className='user-info'>{user.username}</td>
+                <td className='user-info'>{user.email}</td>
+                <td className='user-info'>{user.address.street}</td>
+                <td className='user-info'>{user.address.city}</td>
+              </tr>
             ))}
           </tbody>
         </table>
